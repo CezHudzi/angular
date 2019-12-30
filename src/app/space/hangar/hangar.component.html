@@ -1,0 +1,21 @@
+<div class="hangar-section">
+  <h3>Hangar</h3> {{selectedPilot?.firstName}}
+<app-space-ship [spaceShip]="ship" *ngFor = "let ship of spaceShips | async">
+
+  <button *ngIf="selectedPilot && !ship.pilot" (click)="assignPilot(ship)">PRZYPISZ</button>
+  <button *ngIf="ship.pilot" (click)="deassignPilot(ship)">WYPISZ</button>
+
+</app-space-ship>
+</div>
+
+<div class="hangar-section">
+<app-pilot-room (selected)="selectedPilot= $event"></app-pilot-room>
+
+  <div class="sub-nav">
+    <a routerLink="production" routerLinkActive="active">Production</a>
+    &nbsp;
+    <a routerLink="destruction" routerLinkActive="active">Destruction</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+

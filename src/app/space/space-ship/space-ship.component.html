@@ -1,0 +1,23 @@
+
+<h3>{{spaceShip.modelName}}</h3>
+
+<div class="images">
+<img class="image" [src]="spaceShip.imageUrl" appSpaceImage/>
+  <img class="pilotPhoto" *ngIf="spaceShip.pilot" [src]="spaceShip.pilot.imageUrl">
+</div>
+ŻYCIE:
+<div class="health">
+  <div  [style.width.%]="spaceShip.health"></div>
+</div>
+  <div class="property" [class.active]="spaceShip.activeShields">
+    {{this.spaceShip.activeShields | tickize}} SHIELDS
+  </div>
+<br>
+  <div class="property" [class.active]="spaceShip.activeWeapons">
+    {{this.spaceShip.activeWeapons | tickize}} WEAPONS
+  </div>
+
+<div class="action">
+  <ng-content></ng-content>
+</div>
+

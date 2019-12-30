@@ -1,0 +1,20 @@
+<h3>PILOT ROOM</h3>
+
+<app-pilot *ngFor="let pilot of pilots" [pilot]="pilot" [class.selected]="selectedPilot === pilot">
+
+  <button  *ngIf="selectedPilot !== pilot; else deselectButton" (click)="select(pilot)" class="select-button"> SELECT </button>
+  <ng-template #deselectButton>
+    <button class="deselect-button" (click)="select(null)">
+      UNSELECT
+    </button>
+  </ng-template>
+
+  <button class="edit-button" [routerLink]="['pilots', pilot.id]">
+    Edytuj
+  </button>
+
+</app-pilot>
+
+<button class="add-button" [routerLink]="['pilots', 'new']">
+  Dodaj
+</button>

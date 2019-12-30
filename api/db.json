@@ -1,0 +1,33 @@
+{
+  "pilots": [
+    {
+      "id": 1,
+      "firstName": "DWA",
+      "lastName": "Adama",
+      "imageUrl": "/assets/unknown.png"
+    },
+    {
+      "id": 2,
+      "firstName": "Sharon",
+      "lastName": "Valerii",
+      "imageUrl": "/assets/unknown.png"
+    },
+    {
+      "id": 3,
+      "firstName": "Karl",
+      "lastName": "Kaczka",
+      "imageUrl": "/assets/unknown.png"
+    }
+  ],
+  "forbidden-names": [
+    {
+      "name": "Maruda"
+    },
+    {
+      "name": "Ciamajda"
+    },
+    {
+      "name": "Gapcio"
+    }
+  ]
+}
